@@ -28,6 +28,7 @@ import * as explosions_barrel_explosion from "./explosions/barrel-explosion.js";
 import * as explosions_big_explosion from "./explosions/big-explosion.js";
 import * as explosions_cartoon_pow from "./explosions/cartoon-pow.js";
 import * as explosions_dirt_explosion from "./explosions/dirt-explosion.js";
+import * as explosions_fireball_impact from "./explosions/fireball-impact.js";
 import * as explosions_firework_burst from "./explosions/firework-burst.js";
 import * as explosions_firework_rocket from "./explosions/firework-rocket.js";
 import * as explosions_grenade from "./explosions/grenade.js";
@@ -48,6 +49,9 @@ import * as water_water_orb from "./water/water-orb.js";
 import * as water_waterfall from "./water/waterfall.js";
 import * as water_wave_crash from "./water/wave-crash.js";
 import * as water_whirlpool from "./water/whirlpool.js";
+import * as ice_blizzard_breaks from "./ice/blizzard-breaks.js";
+import * as ice_blizzard_gathers from "./ice/blizzard-gathers.js";
+import * as ice_blizzard_overhead from "./ice/blizzard-overhead.js";
 import * as ice_blizzard_vortex from "./ice/blizzard-vortex.js";
 import * as ice_freeze from "./ice/freeze.js";
 import * as ice_frost_breath from "./ice/frost-breath.js";
@@ -73,6 +77,9 @@ import * as scifi_emp_blast from "./scifi/emp-blast.js";
 import * as scifi_energy_core from "./scifi/energy-core.js";
 import * as scifi_force_field from "./scifi/force-field.js";
 import * as scifi_glitch from "./scifi/glitch.js";
+import * as scifi_hex_shield from "./scifi/hex-shield.js";
+import * as scifi_hex_shield_close from "./scifi/hex-shield-close.js";
+import * as scifi_hex_shield_open from "./scifi/hex-shield-open.js";
 import * as scifi_hologram from "./scifi/hologram.js";
 import * as scifi_jetpack from "./scifi/jetpack.js";
 import * as scifi_laser_grid from "./scifi/laser-grid.js";
@@ -88,7 +95,9 @@ import * as melee_hammer_smash from "./melee/hammer-smash.js";
 import * as melee_heavy_cleave from "./melee/heavy-cleave.js";
 import * as melee_scythe_reap from "./melee/scythe-reap.js";
 import * as melee_spear_sweep from "./melee/spear-sweep.js";
+import * as melee_spin_punch from "./melee/spin-punch.js";
 import * as melee_spin_slash from "./melee/spin-slash.js";
+import * as melee_straight_punch from "./melee/straight-punch.js";
 import * as melee_sword_slash from "./melee/sword-slash.js";
 import * as melee_thrust from "./melee/thrust.js";
 import * as melee_uppercut from "./melee/uppercut.js";
@@ -108,7 +117,9 @@ import * as projectiles_arrow from "./projectiles/arrow.js";
 import * as projectiles_bullet_tracer from "./projectiles/bullet-tracer.js";
 import * as projectiles_cannonball from "./projectiles/cannonball.js";
 import * as projectiles_energy_disc from "./projectiles/energy-disc.js";
+import * as projectiles_fist_qi from "./projectiles/fist-qi.js";
 import * as projectiles_flare from "./projectiles/flare.js";
+import * as projectiles_gold_bullet from "./projectiles/gold-bullet.js";
 import * as projectiles_homing_missile from "./projectiles/homing-missile.js";
 import * as projectiles_laser_bolt from "./projectiles/laser-bolt.js";
 import * as projectiles_magic_missile from "./projectiles/magic-missile.js";
@@ -135,6 +146,7 @@ import * as arcane_blink_out from "./arcane/blink-out.js";
 import * as arcane_magic_circle_cast from "./arcane/magic-circle-cast.js";
 import * as arcane_mana_burst from "./arcane/mana-burst.js";
 import * as arcane_portal from "./arcane/portal.js";
+import * as arcane_ring_burst from "./arcane/ring-burst.js";
 import * as arcane_rune_circle from "./arcane/rune-circle.js";
 import * as arcane_spell_charge from "./arcane/spell-charge.js";
 import * as arcane_star_fall from "./arcane/star-fall.js";
@@ -276,6 +288,7 @@ export const effects = {
   "explosions/big-explosion": explosions_big_explosion,
   "explosions/cartoon-pow": explosions_cartoon_pow,
   "explosions/dirt-explosion": explosions_dirt_explosion,
+  "explosions/fireball-impact": explosions_fireball_impact,
   "explosions/firework-burst": explosions_firework_burst,
   "explosions/firework-rocket": explosions_firework_rocket,
   "explosions/grenade": explosions_grenade,
@@ -296,6 +309,9 @@ export const effects = {
   "water/waterfall": water_waterfall,
   "water/wave-crash": water_wave_crash,
   "water/whirlpool": water_whirlpool,
+  "ice/blizzard-breaks": ice_blizzard_breaks,
+  "ice/blizzard-gathers": ice_blizzard_gathers,
+  "ice/blizzard-overhead": ice_blizzard_overhead,
   "ice/blizzard-vortex": ice_blizzard_vortex,
   "ice/freeze": ice_freeze,
   "ice/frost-breath": ice_frost_breath,
@@ -321,6 +337,9 @@ export const effects = {
   "scifi/energy-core": scifi_energy_core,
   "scifi/force-field": scifi_force_field,
   "scifi/glitch": scifi_glitch,
+  "scifi/hex-shield": scifi_hex_shield,
+  "scifi/hex-shield-close": scifi_hex_shield_close,
+  "scifi/hex-shield-open": scifi_hex_shield_open,
   "scifi/hologram": scifi_hologram,
   "scifi/jetpack": scifi_jetpack,
   "scifi/laser-grid": scifi_laser_grid,
@@ -336,7 +355,9 @@ export const effects = {
   "melee/heavy-cleave": melee_heavy_cleave,
   "melee/scythe-reap": melee_scythe_reap,
   "melee/spear-sweep": melee_spear_sweep,
+  "melee/spin-punch": melee_spin_punch,
   "melee/spin-slash": melee_spin_slash,
+  "melee/straight-punch": melee_straight_punch,
   "melee/sword-slash": melee_sword_slash,
   "melee/thrust": melee_thrust,
   "melee/uppercut": melee_uppercut,
@@ -356,7 +377,9 @@ export const effects = {
   "projectiles/bullet-tracer": projectiles_bullet_tracer,
   "projectiles/cannonball": projectiles_cannonball,
   "projectiles/energy-disc": projectiles_energy_disc,
+  "projectiles/fist-qi": projectiles_fist_qi,
   "projectiles/flare": projectiles_flare,
+  "projectiles/gold-bullet": projectiles_gold_bullet,
   "projectiles/homing-missile": projectiles_homing_missile,
   "projectiles/laser-bolt": projectiles_laser_bolt,
   "projectiles/magic-missile": projectiles_magic_missile,
@@ -383,6 +406,7 @@ export const effects = {
   "arcane/magic-circle-cast": arcane_magic_circle_cast,
   "arcane/mana-burst": arcane_mana_burst,
   "arcane/portal": arcane_portal,
+  "arcane/ring-burst": arcane_ring_burst,
   "arcane/rune-circle": arcane_rune_circle,
   "arcane/spell-charge": arcane_spell_charge,
   "arcane/star-fall": arcane_star_fall,

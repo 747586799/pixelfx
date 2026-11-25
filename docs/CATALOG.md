@@ -1,6 +1,6 @@
 # Catalog
 
-244 effects in 21 categories. Every one is a file in
+256 effects in 21 categories. Every one is a file in
 `src/fx/<category>/<name>.js`; render any of them with `node tools/render.mjs <id> --gif`.
 
 ## moves
@@ -51,6 +51,7 @@ blasts, smoke, fireworks, mushroom clouds.
 | Big explosion | `explosions/big-explosion` | one-shot 7.2s | 360×300 | A huge ground blast in three beats: a white dome, a rolling fireball that climbs into a mushrooming smoke column, heavy rocks, and fires left burning. |
 | Cartoon POW | `explosions/cartoon-pow` | one-shot 1.05s | 184×144 | A comic-book hit: a jagged two-tone burst star slams in with a shake and boiling edges, POW! drops in letter by letter, action lines fly, then it all snaps away. |
 | Dirt explosion | `explosions/dirt-explosion` | one-shot 3.6s | 260×240 | A buried charge goes off: a flash under the floor, a V of dirt clods and grit thrown high, a brown dust plume that billows and settles, and a crater left behind. |
+| Fireball impact | `explosions/fireball-impact` | one-shot 1.35s | 192×160 | A fireball bursts: a white flash, a ball of flame that throws puffs out and cools into smoke, sparks and embers flung wide, broken shock rings and light that dies with it. |
 | Firework burst | `explosions/firework-burst` | one-shot 3.6s | 240×248 | A shell climbs, slows and bursts into a sphere of coloured trailing stars round a gold core; they droop, crackle into white pops and fade, leaving glitter. |
 | Firework rocket | `explosions/firework-rocket` | one-shot 3.8s | 300×300 | A rocket fizzes off the ground on a sparkling gold trail, coasts, and bursts into a palm: heavy gold fronds arc out, droop on glittering trails and crackle at the tips. |
 | Grenade | `explosions/grenade` | one-shot 4.2s | 300×200 | A grenade is lobbed in, bounces, rolls to a stop with its fuse fizzing, shudders, then blows: a white flash, shrapnel streaks, sparks, a small fireball and a scorch. |
@@ -85,6 +86,9 @@ spikes, novas, freezing, shattering.
 
 | effect | id | | size | what it does |
 |---|---|---|---|---|
+| Blizzard breaks | `ice/blizzard-breaks` | one-shot 1.5s | 176×176 | The storm comes apart: the ring slows and thins, snow and ice fly off outward and the eye closes. Its first frame is the blizzard's last, and it fades to nothing. |
+| Blizzard gathers | `ice/blizzard-gathers` | one-shot 1.5s | 176×176 | A storm spins up from nothing: flakes streak in along the wind, snow gathers into a churning ring and a dark eye opens. Its last frame is the blizzard's first. |
+| Blizzard overhead | `ice/blizzard-overhead` | loop 2.4s | 176×176 | Seen from straight above: snow churns round a dark eye, flakes and ice grit whirling with the wind, snow boiling off the ragged rim and a cold flicker in the funnel. |
 | Blizzard vortex | `ice/blizzard-vortex` | loop 2s | 128×116 | A swirling snow tornado: wind bands spin up a leaning funnel, flakes and ice crystals orbit in front and behind, snow boils at its foot and cold light fills its throat. |
 | Freeze | `ice/freeze` | one-shot 4s | 176×128 | Frost races in and climbs the character, turning it to ice; a faceted block crystallizes round it pane by pane, glints, cracks and bursts, and the character thaws free. |
 | Frost breath | `ice/frost-breath` | loop 1.2s | 184×104 | A cone of icy wind blowing right: frost puffs billow out, swell and sink, wind streaks race through, ice crystals tumble and glint off a white-hot mouth. |
@@ -124,6 +128,9 @@ holograms, shields, scanners, warps.
 | Energy core | `scifi/energy-core` | loop 2.4s | 112×100 | A plasma core beating in a steel cage: it swells and throws a shock ring on each beat, two tilted rings orbit it, and arcs jump to the bars and spark. |
 | Force field | `scifi/force-field` | loop 2.4s | 184×104 | A glassy dome of hex plates over the hero: plates glint, tracers from the right slam into it, a ripple and cracks of light race across, sparks glance off. |
 | Glitch | `scifi/glitch` | loop 2.4s | 88×64 | The hero's signal breaks up in bursts: an RGB split, slices torn sideways, rows smeared out, junk blocks and dead pixels, then snaps back clean. |
+| Hex shield | `scifi/hex-shield` | loop 2.4s | 160×160 | A round energy barrier facing us: hex cells glow over a glassy film, a wave and a scan line run across it, single cells flicker and a bright rim turns with dashes racing round. |
+| Hex shield collapses | `scifi/hex-shield-close` | one-shot 0.8s | 160×160 | The barrier fails: the cells blink out one by one from the rim inward, the rim breaks into arcs, the field folds inward and the light dies, starting on the loop's last frame. |
+| Hex shield opens | `scifi/hex-shield-open` | one-shot 0.62s | 160×160 | The barrier deploys: a flare at the centre, then a ring sweeps outward and the hex cells switch on behind it until the whole shield is up, ending on the loop's first frame. |
 | Hologram | `scifi/hologram` | loop 4s | 112×104 | A floor projector throws a cone of light holding a turning wireframe model: scanlines roll through it, a data ring circles it, and it flickers, tears and jitters. |
 | Jetpack | `scifi/jetpack` | loop 2s | 96×116 | Twin thrusters fire straight down: white-hot cores with shock diamonds inside ragged flames, puffs that cool into smoke billowing below, lit by the fire. |
 | Laser grid | `scifi/laser-grid` | loop 3s | 128×84 | Security lasers between two steel posts: red beams slide and scissor across, dust and haze light up only where they cut through, and the floor sweepers scorch and spark. |
@@ -146,7 +153,9 @@ slashes, smears, cleaves, combos.
 | Heavy cleave | `melee/heavy-cleave` | one-shot 1.9s | 208×116 | A glint over the head, then a thick ember arc accelerates over the top into the floor: a white slam, glowing cracks, dust rolling both ways, grit and rising embers. |
 | Scythe reap | `melee/scythe-reap` | one-shot 2.1s | 184×116 | A slow, huge dark crescent reaps round the front with a pale ghostly edge; it hangs, then tears away from the tail into curling wisps and cold vapour. |
 | Spear sweep | `melee/spear-sweep` | one-shot 1.5s | 216×84 | A wide low sweep at shin height: a long flat crescent swings from behind the legs round the front, and the wind of it kicks a wake of dust and grit along the floor. |
+| Spin punch | `melee/spin-punch` | one-shot 0.9s | 208×132 | A spinning backfist of golden qi: a thick white-hot half ring sweeps down the front of the body, cools to gold, flares and breaks into a dotted trace and sparks. |
 | Spin slash | `melee/spin-slash` | one-shot 0.8s | 208×104 | The blade whirls once round the waist on a tilted plane, behind the body and back in front; the closed ring flares white, dissolves into a dotted trace and throws sparks. |
+| Straight punch | `melee/straight-punch` | one-shot 0.85s | 184×108 | A straight golden punch: the fist drives out, a white-hot crescent of air tears off the knuckles, a comic burst and ring pop at the reach, golden sparks fly and dust kicks up. |
 | Sword slash | `melee/sword-slash` | one-shot 0.75s | 136×104 | A tilted crescent whips round in two frames, cools from white to deep blue as it trails off, glints at the tip and throws sparks. |
 | Thrust | `melee/thrust` | one-shot 0.75s | 196×76 | A piercing stab: a bundle of streaks shoots out from the hand to a point, a long four-point star flares at the tip with a pierce ring, sparks and speed lines. |
 | Uppercut | `melee/uppercut` | one-shot 0.85s | 132×128 | A crescent rises from the floor past the face, and at the top a comic impact star bursts: bold outline, hot core, burst lines, twinkles and sparks. |
@@ -180,7 +189,9 @@ bullets, rockets, lasers, arrows.
 | Bullet tracer | `projectiles/bullet-tracer` | loop 0.6s | 200×40 | A white-hot slug tearing along, its tracer burning behind it in a long streak that sputters and cools from white through gold to red, shedding sparks and a thread of smoke. |
 | Cannon shot | `projectiles/cannonball` | one-shot 3.8s | 208×116 | A cannon fires from a muzzle `height` px above the floor (the origin): a white flash, a tongue of flame, the ball arcing off trailing smoke, a big gunsmoke cloud rolling out. |
 | Energy disc | `projectiles/energy-disc` | loop 0.5s | 120×52 | A sawblade of crackling energy spinning flat out as it flies: hooked teeth bright on their leading edges, a white hub, spiral arms churning, sparks flung off the teeth. |
+| Fist qi | `projectiles/fist-qi` | loop 0.5s | 136×48 | A straight punch's qi flying out: a white-hot fist of compressed air, knuckles leading, afterimages off its back while the arm breaks into streaking wind and flecks of light. |
 | Signal flare | `projectiles/flare` | one-shot 5s | 152×232 | A signal flare streaks up off the ground trailing sparks and smoke, bursts, and hangs as a pulsing red star that drips sparks under its own red-lit smoke, then gutters out. |
+| Gold bullet | `projectiles/gold-bullet` | loop 0.5s | 88×32 | A golden bullet in flight, spinning on its axis: a gilded ogive, a bronze driving band, a specular sweeping round it, rifling twisting along the body and air streaking behind. |
 | Homing missile | `projectiles/homing-missile` | one-shot 3.8s | 248×140 | A missile kicks off, arcs up, rolls over and dives onto its target (the origin), its smoke trail left hanging in the air, and hits in a fiery blast of flame, sparks and rocks. |
 | Laser bolt | `projectiles/laser-bolt` | loop 0.5s | 128×32 | A red laser bolt: a white-hot core in a rounded head, red bands tapering back, pulses racing down it, a tail that shimmers apart into wavering dashes. |
 | Magic missile | `projectiles/magic-missile` | one-shot 1.9s | 208×112 | Motes gather into an arcane orb at a hand `height` px above the floor (the origin); it weaves to its target trailing a twisting ribbon and bursts into a star of light. |
@@ -221,6 +232,7 @@ portals, runes, missiles, beams.
 | Magic circle cast | `arcane/magic-circle-cast` | one-shot 3.9s | 200×220 | A circle draws itself on the floor, runes ignite one by one, it flashes, and a column of light fires up and breaks apart into glints. |
 | Mana burst | `arcane/mana-burst` | one-shot 1.8s | 208×150 | Energy rushes into a point and blows out in a white flash and rings, flinging glowing runes that flare and pop into sparks one after another. |
 | Portal | `arcane/portal` | loop 2.4s | 152×116 | An upright rift: fibrous spiral arms wind down into the dark, a lit rim wobbles, motes and streaks are pulled in, the floor glows. |
+| Ring burst | `arcane/ring-burst` | one-shot 0.37s | 224×224 | A shockwave of violet-white light snaps out from a point in a blink, dragging three torn ghost copies behind it, sparks peeling off its edge and a white flash at the core. |
 | Rune circle | `arcane/rune-circle` | loop 4s | 136×100 | A rune circle turns on the floor in perspective: a carousel of runes lit by chasing light, a turning square, ticks, motes rising off it. |
 | Spell charge | `arcane/spell-charge` | loop 1.6s | 120×86 | Energy gathers in the caster's hand: streaks and motes spiral in, rings collapse into a swelling orb that crackles with arcs, ready to fire. |
 | Star fall | `arcane/star-fall` | one-shot 2.5s | 232×172 | Stars streak down on long trails across an area, each landing with a white flash, a ring across the floor and a kick of sparks. |
